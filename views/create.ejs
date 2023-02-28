@@ -1,0 +1,59 @@
+<%
+const activePage = 'create';
+%>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<%- include("./static/nav.ejs", { activePage: activePage }) %>
+<div class="content">
+    <div class="page_header">
+        <h3><i class="fa-solid fa-plus"></i> Create Class </h3>
+    </div>
+    <div class="create-a-course">
+        <div class="input-row">
+            <label for="cname">course name</label>
+            <input type="text" id="cname" placeholder="EX: Introduction to Python"/>
+        </div>
+        <div class="input-row">
+            <label for="csubject">course subject</label>
+            <select>
+                <option value="" disabled selected>- Subject -</option>
+                <option value="MATH">Math</option>
+                <option value="ENG">English</option>
+                <option value="SCI">Science</option>
+                <option value="HIST">History</option>
+                <option value="COMPSCI">Computer Science</option>
+            </select>
+        </div>
+        <div class="input-row">
+            <label for="cdesc">course description</label>
+            <textarea id="cdesc" placeholder="EX: A Basic understanding of Python and algorithms "></textarea>
+        </div>
+        <div class="input-row">
+            <label for="cimage">course image [URL]</label>
+            <input type="text" id="cimage" placeholder="EX: http://anthonyaldrich.com/images/placeholder.jpg"/>
+        </div>
+        <div class="input-row">
+            <label for="ccolor">course color</label>
+            <input type="color" id="ccolor" value="#00567c"/>
+        </div>
+        <div class="input-row">
+            <label for="cteach">assign teacher</label>
+            <select>
+                <option value="" disabled selected>- Teacher -</option>
+                <option value="MATH">1 - Smith, John</option>
+                <option value="ENG">2 - Wade, Roe</option>
+            </select>
+        </div>
+        <div class="input-row">
+            <input type="submit" value="create course" />
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

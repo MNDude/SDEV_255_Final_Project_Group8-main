@@ -1,0 +1,18 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "username": "Teacher",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/201/235/original/vector-male-teacher-avatar.png",
+      "role": "teacher",
+      "password": "Teacher"
+    },
+    {
+      "id": 2,
+      "username": "Student",
+      "image": "https://cdn5.vectorstock.com/i/1000x1000/04/54/male-student-avatar-vector-25980454.jpg",
+      "role": "student",
+      "password": "Student"
+    }
+  ]
+}

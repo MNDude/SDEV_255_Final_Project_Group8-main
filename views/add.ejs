@@ -1,0 +1,90 @@
+<%
+const activePage = 'add';
+%>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<%- include("./static/nav.ejs", { activePage: activePage }) %>
+<div class="content">
+    <div class="page_header">
+        <h3><i class="fa-solid fa-clipboard-check"></i> Course Registration</h3>
+    </div>
+    <div class="search_section">
+        <div class="search_input">
+            <input type="text" placeholder="Course Name"/>
+            <input type="text" placeholder="Course Number"/>
+            <select id="cars" name="cars">
+                <option value="" disabled selected>Semester</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+                <option value="Spring">Spring</option>
+            </select>
+            <input type="submit" value="Search"/>
+        </div>
+    </div>
+    <div class="courses_section">
+        <table id="course_list">
+            <tr>
+                <th></th>
+                <th>
+                    Subject/Sections
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Credits
+                </th>
+                <th>
+                    Instructor
+                </th>
+                <th>
+                    Note
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    // Load courses from JSON file
+    window.addEventListener('load', () => {
+              // Load courses from JSON file
+              const courses = fetch('/getAllCourses');
+                  courses.then(response => response.json())
+                  .then(courses => {
+                      console.log(courses);
+                      // Iterate over courses and create course cards
+                      courses.Courses.forEach(course => {
+                const courseDiv = document.createElement('tr');
+                courseDiv.innerHTML = `
+                                                <td>
+                                                    <input type="checkbox" />
+                                                </td>
+                                                <td>
+                                                    ${course.name}
+                                                </td>
+                                                <td>
+                                                    ${course.description}
+                                                </td>
+                                                <td>
+                                                    ${course.credits}
+                                                </td>
+                                                <td>
+                                                    ${course.teacher}
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                            `;
+                document.getElementById('course_list').appendChild(courseDiv);
+            });
+        })
+        .catch(error => console.error('Error loading courses', error));
+    });
+</script>
+</body>
+</html>

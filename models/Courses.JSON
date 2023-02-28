@@ -1,0 +1,37 @@
+{
+    "Courses": [
+        {
+            "id": "011",
+            "name": "Calculus 101",
+            "subject": "Math",
+            "description": "Introduction to Calculus",
+            "image": "https://www.cmuse.org/wp-content/uploads/2020/06/learn-calculus-lessons-online.jpg",
+            "color":  "255, 42, 4",
+            "credits": 3,
+            "teacher": 1,
+            "students": [2]
+        },
+        {
+            "id": "012",
+            "name": "Trigonometry 101",
+            "subject": "Math",
+            "description": "Introduction to Trigonometry",
+            "image": "https://study.com/cimages/course-image/trigonometry-curriculum-resource-lesson-plans_139542_large.jpg",
+            "color":  "22, 160, 133",
+            "credits": 3,
+            "teacher": 1,
+            "students": [2]
+        },
+        {
+            "id": "021",
+            "name": "Biology 101",
+            "subject": "Science",
+            "description": "Introduction to Biology",
+            "image": "https://study.com/cimages/course-image/biology-101-syllabus-resource-lesson-plans_139158_large.jpg",
+            "color":  "3, 42, 255",
+            "credits": 3,
+            "teacher" : 1,
+            "students": [2]
+        }
+    ]
+}

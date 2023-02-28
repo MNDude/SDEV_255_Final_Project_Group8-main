@@ -1,0 +1,21 @@
+<div class="navigation">
+    <div class="nav-items">
+        <div class="nav-item">
+            <div class="user">
+                <img src="" alt="userimg"/>
+            </div>
+        </div>
+        <div class="nav-item <%= activePage === 'home' ? 'active' : '' %>">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="nav-item <%= activePage === 'course' ? 'active' : '' %>">
+            <a href="/courses"><i class="fa-solid fa-book"></i></a>
+        </div>
+        <div class="nav-item <%= activePage === 'add' ? 'active' : '' %>">
+            <a href="/add"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="nav-item <%= activePage === 'create' ? 'active' : '' %>">
+            <a href="/create"><i class="fa-solid fa-plus"></i></a>
+        </div>
+    </div>
+</div>

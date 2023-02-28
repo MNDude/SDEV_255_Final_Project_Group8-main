@@ -1,0 +1,26 @@
+{
+  "name": "sdev_255_final_project_group8",
+  "version": "1.0.0",
+  "description": "SDEV 255 Group 8 Final Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAldrich16/SDEV_255_Final_Project_Group8.git"
+  },
+  "author": "Anthony Aldrich, Jackson Crantford, Marshall Newton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AAldrich16/SDEV_255_Final_Project_Group8/issues"
+  },
+  "homepage": "https://github.com/AAldrich16/SDEV_255_Final_Project_Group8#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mime": "^3.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

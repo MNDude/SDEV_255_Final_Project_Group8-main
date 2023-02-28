@@ -1,0 +1,28 @@
+{
+  "Courses" : [
+    {
+      "id":"011",
+      "name":"Calculus 101",
+      "subject":"Math",
+      "description":"Introduction to Calculous",
+      "credits":3,
+      "students":[]
+    },
+    {
+      "id":"012",
+      "name":"Trigonometry 101",
+      "subject":"Math",
+      "description":"Introduction to Trigonometry",
+      "credits":3,
+      "students":[]
+    },
+    {
+      "id":"021",
+      "name":"Biology 101",
+      "subject":"Science",
+      "description":"Introduction to Biology",
+      "credits":3,
+      "students":[]
+    }
+  ]
+}
